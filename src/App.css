@@ -1,0 +1,14 @@
+#root{
+  height: auto;
+}
+.App {
+  font-family: Lato;
+  text-align: center;
+}
+
+.window{
+  background-color: rgba(230, 227, 227, 0.479);
+  margin: auto;
+  width: 80%;
+  height: 30px;
+}
