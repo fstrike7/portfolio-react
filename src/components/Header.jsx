@@ -27,7 +27,7 @@ function Header (props) {
       paddingBottom = {500}>
         <Flex
               // padding={5}
-              margin={minWidth ? 150 : 10}
+              margin={minWidth ? 150 : 5}
               direction = {minWidth ? 'row-reverse' : 'column'}
               spacing="200px"
               backgroundColor={isDark ? 'gray.700' : 'gray.100'}

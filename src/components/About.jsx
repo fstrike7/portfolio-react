@@ -30,7 +30,7 @@ export default function About (props) {
     paddingTop = {500}
     paddingBottom = {500}
     >
-        <Flex margin={minWidth ? 100 : 10}
+        <Flex margin={minWidth ? 100 : 0}
               direction = 'column'
               spacing="200px"
               backgroundColor={isDark ? 'gray.700' : 'gray.100'}
