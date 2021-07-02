@@ -2,16 +2,18 @@
 import React from 'react'
 import { useColorMode } from '@chakra-ui/color-mode'
 import { Box, Text } from '@chakra-ui/layout'
-import { IconButton, Image } from '@chakra-ui/react'
+import { IconButton, Image, Stack } from '@chakra-ui/react'
 
 export default function ProjectBox (props) {
   const { colorMode } = useColorMode()
   const isDark = colorMode === 'dark'
   return (
     <Box style={props.boxStyle} cursor='pointer' onClick={() => window.open(props.redirect)}>
-        <Image src={props.imageUrl}
-                h = '250px'
-                objectFit = 'cover'/>
+        <Stack w="100%">
+          <Image src={props.imageUrl}
+                  h='250px'
+                  objectFit = 'cover'/>
+        </Stack>
         <Text textDecoration = 'HighlightText'
           fontWeight = 'semibold'
           color = {isDark ? 'gray.200' : 'gray.700'}
