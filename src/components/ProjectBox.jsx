@@ -9,7 +9,7 @@ export default function ProjectBox (props) {
   const isDark = colorMode === 'dark'
   return (
     <Box style={props.boxStyle} cursor='pointer' onClick={() => window.open(props.redirect)}>
-        <Image src={props.imageUrl} w ='250px'
+        <Image src={props.imageUrl}
                 h = '250px'
                 objectFit = 'cover'/>
         <Text textDecoration = 'HighlightText'
