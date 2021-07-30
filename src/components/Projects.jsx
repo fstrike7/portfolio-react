@@ -14,7 +14,7 @@ import ProjectBox from './ProjectBox'
 // import { useMediaQuery } from '@chakra-ui/media-query'
 import { FaPython, FaJsSquare, FaHtml5, FaDatabase, FaReact, FaCss3 } from 'react-icons/fa'
 
-export default function Projects () {
+export default function Projects (props) {
   const { colorMode } = useColorMode()
   const isDark = colorMode === 'dark'
   //   const [minWidth] = useMediaQuery('(min-width: 800px) and (orientation:landscape)')
@@ -33,6 +33,16 @@ export default function Projects () {
     _hover: { boxShadow: '0 8px 16px 0 rgba(0,0,0,0.8)' }
   }
 
+  const goContact = () => {
+    const element = document.getElementById('contact')
+    element.scrollIntoView({ block: 'center' })
+  }
+
+  const clickContact = () => {
+    // eslint-disable-next-line react/prop-types
+    Promise.resolve(props.setShowContacts(true)).then(goContact)
+  }
+
   return (
     <Stack id="projects"
     paddingTop = {500}
@@ -48,7 +58,7 @@ export default function Projects () {
         </SimpleGrid>
         <Flex justifyContent="space-evenly">
           <Button onClick={goAbout} w='fit-content' p={5} variant={isDark ? 'solid' : 'outline'} colorScheme="blue">Volver</Button>
-          <Button onClick={goAbout} w='fit-content' p={5} variant={isDark ? 'solid' : 'outline'} colorScheme="blue">Continuar</Button>
+          <Button onClick={clickContact} w='fit-content' p={5} variant={isDark ? 'solid' : 'outline'} colorScheme="blue">Continuar</Button>
         </Flex>
     </Stack>
   )

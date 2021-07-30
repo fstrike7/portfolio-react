@@ -11,6 +11,7 @@ import { useColorMode } from '@chakra-ui/color-mode'
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa'
 import Empty from './components/Empty'
 import Header from './components/Header'
+import Contact from './components/Contact'
 
 const About = React.lazy(() => import('./components/About.jsx'))
 
@@ -22,6 +23,7 @@ function App () {
 
   const [showAbout, setShowAbout] = useState(false)
   const [showProjects, setShowProjects] = useState(false)
+  const [showContact, setShowContacts] = useState(false)
 
   React.Component.componentDidMount = () => {
     document.documentElement.scrollTop = 0
@@ -44,7 +46,10 @@ function App () {
             showAbout && <Suspense fallback={<Stack id="about"><Empty/></Stack>}><About setShowProjects={setShowProjects.bind(this)}/></Suspense>
           }
           {
-            showProjects && <Suspense fallback={<Stack id="projects"><Empty/></Stack>}><Projects/></Suspense>
+            showProjects && <Suspense fallback={<Stack id="projects"><Empty/></Stack>}><Projects setShowContacts={setShowContacts.bind(this)}/></Suspense>
+          }
+          {
+            showContact && <Suspense fallback={<Stack id="contact"><Empty/></Stack>}><Contact/></Suspense>
           }
         </VStack>
       </Route>

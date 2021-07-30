@@ -8,8 +8,8 @@ export default function ProjectBox (props) {
   const { colorMode } = useColorMode()
   const isDark = colorMode === 'dark'
   return (
-    <Box style={props.boxStyle} cursor='pointer' onClick={() => window.open(props.redirect)}>
-        <Stack w="100%">
+    <Box style={props.boxStyle}>
+        <Stack w="100%" cursor='pointer' onClick={() => window.open(props.redirect)}>
           <Image src={props.imageUrl}
                   h='250px'
                   objectFit = 'cover'/>
@@ -25,12 +25,14 @@ export default function ProjectBox (props) {
         <br/>
         <Text fontWeight = 'light'>{props.description}</Text>
         <br/>
-        <Text>
-        Desarrollado con...
-        </Text>
-        { props.languages.map((element, _key) =>
-            <IconButton m={3} key={_key} icon={element} />
-        )}
+        <Box marginTop="auto" marginBottom="2">
+          <Text>
+          Desarrollado con...
+          </Text>
+          { props.languages.map((element, _key) =>
+              <IconButton m={3} key={_key} icon={element} />
+          )}
+        </Box>
 
     </Box>
   )
