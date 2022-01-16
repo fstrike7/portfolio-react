@@ -25,21 +25,6 @@ export default function About (props) {
     Promise.resolve(props.setShowProjects(true)).then(goProjects)
   }
 
-  const showNameBox = (e) => {
-    console.log(e.target.id)
-    return (
-      <Stack position="relative" top="40px">
-        <Box margin={minWidth ? 100 : 0}
-              spacing="200px"
-              backgroundColor={isDark ? 'gray.700' : 'gray.100'}
-              borderRadius="25px"
-              p={5}>
-          <p>{e.target.id}</p>
-        </Box>
-      </Stack>
-    )
-  }
-
   return (
     <Stack id="about"
     paddingTop = {500}
@@ -56,20 +41,20 @@ export default function About (props) {
                 <Text fontSize="2xl" textDecoration="HighlightText" fontWeight="semibold" color={isDark ? 'gray.200' : 'gray.700'} textAlign="center">Acerca de mí </Text>
                 <br/>
                 <Text textDecoration="HighlightText" fontWeight="semibold" color={isDark ? 'gray.200' : 'gray.700'} textAlign="center" p={5} backgroundColor={ isDark ? 'whiteAlpha.300' : 'whiteAlpha.700'} borderRadius={10}>
-                    Tengo 19 años, soy estudiante de programación y me especializo en el area de desarrollo Web, principalmente Frontend. <br/>
-                    Cuento con 2 años de experiencia programando y publicando proyectos personales en mi cuenta de <a href="https://github.com/fstrike7">GitHub</a>.
-                    <br/> Aspiro a desarrollarme como Full Stack Web Developer.
+                    Tengo 19 años, estudiante y programador Frontend, formandome como Full Stack Web Developer<br/>
+                    Cuento con 2 años de experiencia, programando y publicando proyectos personales en mi cuenta de <a href="https://github.com/fstrike7">GitHub</a><br />
+                    Estudio Backend en <a href="https://courseit.io/">CourseIt</a>.
                 </Text>
             </Box>
             <Box alignSelf="center">
                 <Text marginBottom={1} fontSize="2xl" textDecoration="HighlightText" fontWeight="semibold" color={isDark ? 'gray.200' : 'gray.700'} textAlign="center">Habilidades</Text>
                 <Box>
-                  <IconButton w="50px" h="50px" onClick={showNameBox} id="btnHtml5" ml={2} icon={ <FaHtml5/> } isRound="true"></IconButton>
-                  <IconButton w="50px" h="50px" onClick={showNameBox} id="btnPython" ml={2} icon={ <FaPython/> } isRound="true"></IconButton>
-                  <IconButton w="50px" h="50px" onClick={showNameBox} id="btnJavascript" ml={2} icon={ <FaJsSquare/> } isRound="true"></IconButton>
-                  <IconButton w="50px" h="50px" onClick={showNameBox} id="btnReact" ml={2} icon={ <FaReact/> } isRound="true"></IconButton>
-                  <IconButton w="50px" h="50px" onClick={showNameBox} id="btnGit" ml={2} icon={ <FaGitSquare/> } isRound="true"></IconButton>
-                  <IconButton w="50px" h="50px" onClick={showNameBox} id="btnSQL" ml={2} icon={ <FaDatabase/> } isRound="true"></IconButton>
+                  <IconButton w="50px" h="50px" id="btnHtml5" ml={2} icon={ <FaHtml5/> } isRound="true"></IconButton>
+                  <IconButton w="50px" h="50px" id="btnPython" ml={2} icon={ <FaPython/> } isRound="true"></IconButton>
+                  <IconButton w="50px" h="50px" id="btnJavascript" ml={2} icon={ <FaJsSquare/> } isRound="true"></IconButton>
+                  <IconButton w="50px" h="50px" id="btnReact" ml={2} icon={ <FaReact/> } isRound="true"></IconButton>
+                  <IconButton w="50px" h="50px" id="btnGit" ml={2} icon={ <FaGitSquare/> } isRound="true"></IconButton>
+                  <IconButton w="50px" h="50px" id="btnSQL" ml={2} icon={ <FaDatabase/> } isRound="true"></IconButton>
                 </Box>
             </Box>
         </Flex>

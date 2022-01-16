@@ -49,7 +49,7 @@ export default function Projects (props) {
     paddingBottom = {500}
     >
         <Text marginLeft="25px" fontSize="5xl">Proyectos</Text>
-        <SimpleGrid columns={[1, null, 4]} spacing={10}>
+        <SimpleGrid minChildWidth='280px' spacing={10}>
             <ProjectBox redirect={'https://recursosweb.herokuapp.com/'} boxStyle={boxStyle} name="Recursos Web" imageUrl={recursosWebPreview} description="Proyecto de plataforma Web tipo 'red social' para subir material de estudio o relacionado a la carrera. Utilizando el framework Django y SQLite3 para Backend." languages={[<FaPython key="pythonIcon"/>, <FaJsSquare key="jsIcon"/>, <FaHtml5 key="html5Icon"/>, <FaDatabase key='databaseIcon'/>]}/>
             <ProjectBox redirect={'https://github.com/fstrike7/World-Of-Zuul-Python'} boxStyle={boxStyle} name="World Of Zuul en Python" imageUrl={worldOfZuulPreview} description="Juego por consola diseñado para el entendimiento y aplicación de la programación orientada a objetos, escrito en su totalidad en Python." languages={[<FaPython key='pythonIcon'/>]}/>
             <ProjectBox redirect={'https://github.com/fstrike7/discordpy_basics'} boxStyle={boxStyle} name="Discordpy | Tweepy Basics" imageUrl={discordpyAndTweepyPreview} description="Repositorios diseñados para guiar en la creación de bots para Twitter y Discord, ambos comentados en inglés y escritos en Python." languages={[<FaPython key='pythonIcon'/>, <FaDatabase key='databaseIcon'/>]}/>

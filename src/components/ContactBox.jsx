@@ -14,13 +14,14 @@ function ContactBox (props) {
             <Box w="50" h="auto" display="flex" flexFlow="column nowrap" alignItems="center" justifyContent="space-between">
                 <IconButton onMouseOverCapture={setShowName} onClick={() => window.open(props.redirect)} w="50px" h="50px" icon={props.icon}/>
             </Box>
-            {showName && <Text textDecoration = 'HighlightText'
+            <Text textDecoration = 'HighlightText'
+            visibility={showName ? 'visible' : 'hidden'}
             fontWeight = 'semibold'
             color = {isDark ? 'gray.200' : 'gray.700'}
             textAlign = 'center'
             p = {2}
             opacity={0.6}>{props.name}
-            </Text>}
+            </Text>
         </div>
   )
 }
